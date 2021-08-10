@@ -6,9 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+프로젝트 실행전에 반드시 모듈 설치가 필요
+
+
 ### `npm start`
 
-Runs the app in the development mode.\
+프로젝트를 실행하는 명령어
+아래 주소로 접근이 가능합니다.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
