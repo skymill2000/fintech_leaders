@@ -21,6 +21,10 @@ const plus = (p1, p2) => {
     console.log(p1 + p2);
 }
 
+const minus = (p1, p2) => {
+    console.log(p1 - p2);
+}
+
 console.log(2 + 1);
 console.log(2 + 3);
 console.log(2 + 5);
@@ -30,7 +34,7 @@ console.log('-----------')
 plus(2,1);
 plus(2,3);
 plus(2,5);
-
+minus(3,1);
 
 
 
