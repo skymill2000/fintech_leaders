@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 const Header = ({title}) => {
   return(
@@ -10,13 +11,15 @@ const Header = ({title}) => {
 
 
 function App() {
+  const [data, setData] = useState();
   const clickEvent = () =>{
     alert("버튼 클릭하셨습니다.")
   }
 
   const handleChange = (event) => {
     const userInput = event.target.value;
-    console.log("데이터가 변경:", userInput)//? 입력 데이터는?    
+    setData(userInput);
+    console.log("데이터가 변경:", data)//? 입력 데이터는?    
   }
 
   return (
@@ -25,6 +28,8 @@ function App() {
       <Header ></Header>
       <Header></Header>
       <Header></Header>
+      {data}
+      <br/>
       <input onChange={handleChange}></input>
       <button onClick={clickEvent}>이벤트 버튼입니다.</button>
     </>
