@@ -14,8 +14,9 @@ function App() {
     alert("버튼 클릭하셨습니다.")
   }
 
-  const handleChange = () => {
-    console.log("데이터가 변경되었습니다.")//? 입력 데이터는?    
+  const handleChange = (event) => {
+    const userInput = event.target.value;
+    console.log("데이터가 변경:", userInput)//? 입력 데이터는?    
   }
 
   return (
