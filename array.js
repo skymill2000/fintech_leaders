@@ -7,6 +7,10 @@ console.log(cars[1])
 console.log(cars[2])
 console.log(cars[3])
 
+for(let i = 0; i < cars.length; i++){
+    console.log(cars[i]);
+}
+
 cars.map((car)=>{
     console.log(car);
 })
