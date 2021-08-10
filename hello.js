@@ -16,3 +16,21 @@ let car = {
 
 console.log(car.name);
 car.start();
+
+const plus = (p1, p2) => {
+    console.log(p1 + p2);
+}
+
+console.log(2 + 1);
+console.log(2 + 3);
+console.log(2 + 5);
+
+console.log('-----------')
+
+plus(2,1);
+plus(2,3);
+plus(2,5);
+
+
+
+
