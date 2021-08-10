@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header title="첫번째"></Header>
-      <Header></Header>
+      <Header ></Header>
       <Header></Header>
       <Header></Header>
     </>
