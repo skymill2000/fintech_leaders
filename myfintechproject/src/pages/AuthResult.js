@@ -32,14 +32,16 @@ const AuthResultPage = () => {
       },
       data: sendData,
     };
-    
+
     axios(option).then((response) => {
       console.log(response.data);
       setaccessToken(response.data.access_token);
       localStorage.setItem("accessToken", response.data.access_token);
+      //로컬스토리지에 토큰저장
       localStorage.setItem("userSeqNum", response.data.user_seq_no);
-    //   window.opener.location.href = "/list";
-    //   window.close();
+      //로컬스토리지에 사용자 등록번호저장
+      window.opener.location.href = "/list";
+      window.close();
     });
   };
 
