@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthResultPage from "./pages/AuthResult";
 import AxiosTest from "./pages/AxiosTest";
+import BalancePage from "./pages/BalancePage";
 import ListPage from "./pages/ListPage";
 import MainPage from "./pages/MainPage";
 
@@ -21,6 +22,10 @@ function App() {
         <Route path="/list" exact>
           <ListPage></ListPage>
         </Route>
+        <Route path="/balance" exact>
+          <BalancePage/>
+        </Route>
+
       </Switch>
     </Router>
   );
