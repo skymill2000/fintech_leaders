@@ -15,28 +15,6 @@ function App() {
     <Router>
       <Switch>
         <Route path="/axios" exact>
-          <AxiosComponent />
-        </Route>
-        <Route path="/news" exact>
-          <NewsPage />
-        </Route>
-        <Route path="/main" exact>
-          <MainPage />
-        </Route>
-        <Route path="/authResult" exact>
-          <AuthResultPage />
-        </Route>
-        <Route path="/list" exact>
-          <ListPage />
-        </Route>
-        <Route path="/balance" exact>
-          <BalancePage />
-        </Route>
-        <Route path="/qr" exact>
-          <QrCodePage />
-        </Route>
-        <Route path="/qrreader" exact>
-          <QrReader />
         </Route>
       </Switch>
     </Router>
