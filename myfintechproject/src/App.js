@@ -6,6 +6,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/test" exact>
+          테스트
         </Route>
       </Switch>
     </Router>
