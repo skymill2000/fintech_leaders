@@ -12,11 +12,14 @@ const BalancePage = () => {
     const getBalance = () =>{
         const option = {
             method: "GET",
-            url: "", //postman url 참고하기
+            url: "v2.0/account/balance/fin_num", //postman url 참고하기
             headers: {
               Authorization: `bearer ${localStorage.getItem("accessToken")}`,
             },
             params: {
+                bank_tran_id : "T991599190U000100006",
+                fintech_use_num : finuseno,
+                tran_dtime : "20210812204700",
                 //포스트맨 참고하여 작성
             },
         };

@@ -25,7 +25,6 @@ function App() {
         <Route path="/balance" exact>
           <BalancePage/>
         </Route>
-
       </Switch>
     </Router>
   );
