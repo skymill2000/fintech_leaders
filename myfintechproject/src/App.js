@@ -1,38 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState} from 'react';
-
-const Header = ({title}) => {
-  return(
-  <>
-    <h1>{title} 입니다.</h1>
-  </>)
-}
-
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AxiosComponent from "./component/AxiosComponent";
+import ListComponent from "./component/ListComponent";
+import AuthResultPage from "./pages/AuthResultPage";
+import BalancePage from "./pages/BalancePage";
+import ListPage from "./pages/ListPage";
+import MainPage from "./pages/MainPage";
+import NewsPage from "./pages/NewsPage";
+import QrCodePage from "./pages/QrCodePage";
+import QrReader from "./pages/QrReader";
 
 function App() {
-  const [data, setData] = useState();
-  const clickEvent = () =>{
-    alert("버튼 클릭하셨습니다.")
-  }
-
-  const handleChange = (event) => {
-    const userInput = event.target.value;
-    setData(userInput);
-    console.log("데이터가 변경:", data)//? 입력 데이터는?    
-  }
-
   return (
-    <>
-      <Header title="첫번째"></Header>
-      <Header ></Header>
-      <Header></Header>
-      <Header></Header>
-      {data}
-      <br/>
-      <input onChange={handleChange}></input>
-      <button onClick={clickEvent}>이벤트 버튼입니다.</button>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/axios" exact>
+          <AxiosComponent />
+        </Route>
+        <Route path="/news" exact>
+          <NewsPage />
+        </Route>
+        <Route path="/main" exact>
+          <MainPage />
+        </Route>
+        <Route path="/authResult" exact>
+          <AuthResultPage />
+        </Route>
+        <Route path="/list" exact>
+          <ListPage />
+        </Route>
+        <Route path="/balance" exact>
+          <BalancePage />
+        </Route>
+        <Route path="/qr" exact>
+          <QrCodePage />
+        </Route>
+        <Route path="/qrreader" exact>
+          <QrReader />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
